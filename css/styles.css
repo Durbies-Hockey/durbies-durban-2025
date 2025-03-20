@@ -1,0 +1,40 @@
+/* Custom styles beyond Tailwind */
+
+/* Fixture styles */
+.fixture {
+    transition: all 0.3s ease;
+}
+
+/* Gender-specific styles */
+[data-gender="boys"] {
+    border-left: 4px solid #3b82f6; /* Blue */
+}
+
+[data-gender="girls"] {
+    border-left: 4px solid #ec4899; /* Pink */
+}
+
+/* Durbanville team emphasis */
+.team--durbanville-boys-a,
+.team--durbanville-boys-b {
+    font-weight: 700;
+    color: #1d4ed8; /* Darker blue */
+}
+
+.team--durbanville-girls-a,
+.team--durbanville-girls-b {
+    font-weight: 700;
+    color: #be185d; /* Darker pink */
+}
+
+/* Time slots */
+.time {
+    font-family: monospace;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .fixture {
+        font-size: 0.875rem;
+    }
+} 

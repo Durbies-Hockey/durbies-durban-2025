@@ -1,0 +1,35 @@
+Day,Time,FIELD A,FIELD A,FIELD B,FIELD B,FIELD C,FIELD C,FIELD D,FIELD D,FIELD E,FIELD E,FIELD F,FIELD F,BISON A,BISON A,BISON B,BISON B
+Friday,08h30,Gene Louw B,Sun Valley,Durbanville B,Outeniqua B,Edgemead,Sunridge,Bastion,Grove,b,b,b,b,b,b,b,b
+Friday,09h00,Durbanville A,Outeniqua A,Rhenish,Micklefield,Bredasdorp,Greenfield,De Hoop,Oakhurst,b,b,b,b,b,b,b,b
+Friday,09h30,Panorama B,Eversdal,Groote Schuur,Reddam,Edgemead,Woodridge Yellow,Woodridge White,Gene Louw B,,,,,b,b,b,b
+Friday,10h00,Bastion,Bredasdorp,Outeniqua A,De Hoop,Durbanville B,Micklefield,Durbanville A,Greenfield,Sun Valley,Grove,b,b,b,b,b,b
+Friday,10h30,Woodridge White,Reddam,Woodridge Yellow,Oakhurst,Panorama B,Rhenish,Outeniqua B,Groote Schuur,Sunridge,Eversdal,b,b,b,b,b,b
+Friday,11h00,Outeniqua A,Sun Valley,Bastion,Greenfield,Bredasdorp,De Hoop,b,b,,,,,b,b,b,b
+Friday,11h30,Gene Louw B,Oakhurst,Rhenish,Durbanville A,Outeniqua B,Sunridge,Panorama B,Micklefield,Woodridge White,Eversdal,Woodridge Yellow,Grove,Edgemead,Reddam,Rhenish,Groote Schuur
+Friday,12h00,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+Friday,12h30,Rhenish,Sunridge,Edgemead,Eversdal,Gene Louw B,Grove,Durbanville A,Bastion,Groote Schuur,Micklefield,Bredasdorp,Sun Valley,De Hoop,Greenfield,Durbanville B,Oakhurst
+Friday,13h00,b,b,b,b,b,b,b,b,b,b,,,Woodridge Yellow,Outeniqua A,Woodridge White,Outeniqua B
+Friday,13h30,b,b,b,b,,,b,b,Reddam,Grove,Bastion,De Hoop,Durbanville B,Panorama B,Durbanville A,Sun Valley
+Friday,14h00,b,b,b,b,b,b,b,b,Outeniqua A,Oakhurst,Woodridge White,Micklefield,Gene Louw B,Bredasdorp,Edgemead,Rhenish
+Friday,14h30,Panorama B,Groote Schuur,b,b,b,b,b,b,b,b,Durbanville B,Sunridge,Outeniqua B,Reddam,Woodridge Yellow,Greenfield
+Friday,15h00,b,b,,,,,,,,,,,,,,
+SATURDAY,08h00,Bastion,Sun Valley,b,b,Panorama B,Sunridge,Rhenish,Reddam,b,b,b,b,b,b,b,b
+SATURDAY,08h30,Durbanville A,Woodridge Yellow,Durbanville B,Woodridge White,Bredasdorp,Oakhurst,Outeniqua B,Eversdal,,,,,b,b,b,b
+SATURDAY,09h00,Edgemead,Micklefield,Gene Louw B,Greenfield,Outeniqua A,Grove,Sunridge,De Hoop,,,,,b,b,b,b
+SATURDAY,09h30,b,b,b,b,Durbanville B,Reddam,Woodridge White,Groote Schuur,Durbanville A,Oakhurst,Woodridge Yellow,De Hoop,Panorama B,Sun Valley,Outeniqua B,Rhenish
+SATURDAY,10h00,b,b,b,b,b,b,b,b,Bastion,Gene Louw B,b,b,Micklefield,Eversdal,Greenfield,Grove
+SATURDAY,10h30,b,b,b,b,b,b,Reddam,Sunridge,,,,,Outeniqua A,Bredasdorp,Panorama B,Edgemead
+SATURDAY,11h00,b,b,b,b,b,b,b,b,Groote Schuur,Greenfield,Oakhurst,Sun Valley,Durbanville B,Rhenish,Woodridge Yellow,Gene Louw B
+SATURDAY,11h30,b,b,b,b,b,b,b,b,Woodridge White,Edgemead,Outeniqua A,Bastion,De Hoop,Grove,Durbanville A,Bredasdorp
+SATURDAY,12h00,b,b,b,b,b,b,Micklefield,Sunridge,,,,,Outeniqua B,Panorama B,Groote Schuur,Eversdal
+SATURDAY,12h30,b,b,b,b,b,b,b,b,b,b,b,b,Durbanville B,Groote Schuur,Woodridge White,Rhenish
+SATURDAY,13h00,Outeniqua A,Gene Louw B,Micklefield,Bastion,Outeniqua B,Edgemead,Durbanville A,De Hoop,Greenfield,Sun Valley,Reddam,Eversdal,Woodridge Yellow,Bredasdorp,Oakhurst,Grove
+SATURDAY,13h30,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b
+SATURDAY,14h00,Rhenish,Bastion,Durbanville A,Sunridge,Woodridge Yellow,Panorama B,Outeniqua A,Edgemead,,,,,Oakhurst,Groote Schuur,Gene Louw B,Outeniqua B
+SATURDAY,14h30,Sun Valley,Micklefield,De Hoop,Woodridge White,Greenfield,Reddam,Bredasdorp,Durbanville B,,,,,Grove,Eversdal,b,b
+SUNDAY,08h30,Edgemead,Groote Schuur,Panorama B,Reddam,Gene Louw B,De Hoop,Outeniqua B,Bredasdorp,,,,,b,b,b,b
+SUNDAY,09h00,Outeniqua A,Greenfield,Bastion,Oakhurst,Durbanville B,Eversdal,Durbanville A,Grove,b,b,b,b,b,b,b,b
+SUNDAY,09h30,Woodridge White,Sunridge,Outeniqua B,Micklefield,Woodridge Yellow,Sun Valley,b,b,,,,,b,b,b,b
+SUNDAY,10h00,b,b,b,b,b,b,b,b,Eversdal,Rhenish,Durbanville A,Gene Louw B,b,b,b,b
+SUNDAY,10h30,b,b,b,b,b,b,Woodridge Yellow,Bastion,Woodridge White,Panorama B,Bredasdorp,Grove,Durbanville B,Edgemead,De Hoop,Sun Valley
+SUNDAY,11h00,Eversdal,Outeniqua A,Groote Schuur,Sunridge,Oakhurst,Greenfield,Reddam,Micklefield,,,,,,,,
