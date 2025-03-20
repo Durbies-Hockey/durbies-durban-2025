@@ -16,8 +16,6 @@ function initApp() {
 
 // Process fixtures data
 function processFixtures(boysData, girlsData) {
-    const currentDateTime = new Date();
-    
     // Process boys fixtures
     const processedBoys = boysData
         .flatMap(fixture => {
@@ -27,8 +25,7 @@ function processFixtures(boysData, girlsData) {
                     ...match,
                     day: fixture.day,
                     time: fixture.time,
-                    gender: 'boys',
-                    datetime: createDateTime(fixture.day, fixture.time)
+                    gender: 'boys'
                 }));
         });
 
@@ -41,37 +38,24 @@ function processFixtures(boysData, girlsData) {
                     ...match,
                     day: fixture.day,
                     time: fixture.time,
-                    gender: 'girls',
-                    datetime: createDateTime(fixture.day, fixture.time)
+                    gender: 'girls'
                 }));
         });
 
-    // Combine, filter past fixtures, and sort by date/time
+    // Combine and sort by day and time
+    const daysOrder = { 'FRIDAY': 1, 'SATURDAY': 2, 'SUNDAY': 3 };
     return [...processedBoys, ...processedGirls]
-        .filter(fixture => fixture.datetime > currentDateTime)
-        .sort((a, b) => a.datetime - b.datetime);
-}
-
-// Create DateTime object from day and time strings
-function createDateTime(day, time) {
-    const [hours, minutes] = time.split('h').map(Number);
-    const date = new Date();
-    
-    // Set the date based on the day of the week
-    const daysMap = {
-        'FRIDAY': 5,
-        'SATURDAY': 6,
-        'SUNDAY': 0
-    };
-    
-    const targetDay = daysMap[day.toUpperCase()];
-    const currentDay = date.getDay();
-    const daysToAdd = (targetDay - currentDay + 7) % 7;
-    
-    date.setDate(date.getDate() + daysToAdd);
-    date.setHours(hours, minutes, 0, 0);
-    
-    return date;
+        .sort((a, b) => {
+            // First sort by day
+            const dayDiff = daysOrder[a.day] - daysOrder[b.day];
+            if (dayDiff !== 0) return dayDiff;
+            
+            // Then sort by time
+            const [aHours, aMinutes] = a.time.split('h').map(Number);
+            const [bHours, bMinutes] = b.time.split('h').map(Number);
+            const timeDiff = (aHours * 60 + aMinutes) - (bHours * 60 + bMinutes);
+            return timeDiff;
+        });
 }
 
 // Display fixtures
@@ -113,7 +97,7 @@ function displayFixtures(fixtures) {
         `;
     });
 
-    container.innerHTML = html || '<p class="text-center">No upcoming fixtures</p>';
+    container.innerHTML = html || '<p class="text-center">No fixtures found</p>';
 }
 
 // Format team name with Durbanville emphasis

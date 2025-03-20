@@ -243,7 +243,6 @@ const FIXTURES_DATA = {
             day: "SUNDAY",
             time: "10h00",
             matches: [
-                { field: "FIELD E", team1: "Eversdal", team2: "Rhenish" },
                 { field: "FIELD F", team1: "Durbanville A", team2: "Gene Louw B" }
             ]
         },
