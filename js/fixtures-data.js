@@ -88,7 +88,14 @@ const FIXTURES_DATA = {
             time: "12h30",
             matches: [
                 { field: "FIELD B", team1: "Durbanville A", team2: "Bredasdorps" },
-                { field: "FIELD H", team1: "Rhenish", team2: "Durbanville B" }
+                { field: "FIELD D", team1: "Rhenish", team2: "Durbanville B" }
+            ]
+        },
+        {
+            day: "SATURDAY",
+            time: "13h30",
+            matches: [
+                { field: "FIELD C", team1: "Durbanville A", team2: "Woodridge White" }
             ]
         },
         {
@@ -167,14 +174,14 @@ const FIXTURES_DATA = {
                 { field: "FIELD F", team1: "Durbanville B", team2: "Sunridge" }
             ]
         },
-
-   {
+        {
             day: "FRIDAY",
             time: "15h00",
             matches: [
                 { field: "FIELD B", team1: "Durbanville A", team2: "Rhenish" }
             ]
-        },       {
+        },       
+        {
             day: "SATURDAY",
             time: "08h30",
             matches: [
@@ -206,9 +213,9 @@ const FIXTURES_DATA = {
         },
         {
             day: "SATURDAY",
-            time: "12h30",
+            time: "13h00",
             matches: [
-                { field: "BISON A", team1: "Durbanville B", team2: "Groote Schuur" }
+                { field: "FIELD F", team1: "Durbanville B", team2: "Groote Schuur" }
             ]
         },
         {
@@ -236,8 +243,14 @@ const FIXTURES_DATA = {
             day: "SUNDAY",
             time: "09h00",
             matches: [
-                { field: "FIELD C", team1: "Durbanville B", team2: "Eversdal" },
                 { field: "FIELD D", team1: "Durbanville A", team2: "Grove" }
+            ]
+        },
+        {
+            day: "SUNDAY",
+            time: "09h30",
+            matches: [
+                { field: "FIELD C", team1: "Durbanville B", team2: "Sun Valley" }
             ]
         },
         {
@@ -251,7 +264,7 @@ const FIXTURES_DATA = {
             day: "SUNDAY",
             time: "10h30",
             matches: [
-                { field: "BISON B", team1: "Durbanville B", team2: "Edgemead" }
+                { field: "BISON A", team1: "Durbanville B", team2: "Edgemead" }
             ]
         }
     ]
