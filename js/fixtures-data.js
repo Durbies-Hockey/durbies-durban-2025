@@ -173,7 +173,14 @@ const FIXTURES_DATA = {
                 { field: "FIELD F", team1: "Durbanville B", team2: "Sunridge" }
             ]
         },
-        {
+
+   {
+            day: "FRIDAY",
+            time: "15h00",
+            matches: [
+                { field: "FIELD B", team1: "Durbanville A", team2: "Rhenish" }
+            ]
+        },       {
             day: "SATURDAY",
             time: "08h30",
             matches: [
