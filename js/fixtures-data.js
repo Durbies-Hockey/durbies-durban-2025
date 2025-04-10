@@ -1,271 +1,150 @@
 const FIXTURES_DATA = {
-    boys: [
+    important_dates: [
         {
-            day: "FRIDAY",
-            time: "08h30",
-            matches: [
-                { field: "BISON A", team1: "Durbanville A", team2: "Outeniqua A" },
-                { field: "BISON B", team1: "Durbanville B", team2: "Outeniqua B" }
-            ]
+            date: "2025-04-08",
+            event: "School Opens",
+            description: "First day of Term 2"
         },
         {
-            day: "FRIDAY",
-            time: "10h00",
-            matches: [
-                { field: "BISON A", team1: "Durbanville B", team2: "Panorama B" }
-            ]
+            date: "2025-04-09",
+            event: "1st Team Kit Handover",
+            description: "Venue: Learner Centre, 19:00 - All coaches, parents, 1st team players and sponsors"
         },
         {
-            day: "FRIDAY",
-            time: "10h30",
-            matches: [
-                { field: "FIELD F", team1: "Durbanville A", team2: "Bastion" }
-            ]
+            date: "2025-04-09",
+            event: "U/13 Rule Discussion",
+            description: "Table View - Non-Premier: 17:00, Premier: 17:45"
         },
         {
-            day: "FRIDAY",
-            time: "12h00",
-            matches: [
-                { field: "FIELD E", team1: "Durbanville A", team2: "Rhenish" },
-                { field: "FIELD F", team1: "Durbanville B", team2: "Bredasdorp" }
-            ]
+            date: "2025-04-11",
+            event: "U/13 WP Trials (Round 1)",
+            description: "Girls @ Table View, Boys @ Kenridge"
         },
         {
-            day: "FRIDAY",
-            time: "13h30",
-            matches: [
-                { field: "FIELD A", team1: "Woodridge Yellow", team2: "Durbanville A" },
-                { field: "FIELD B", team1: "Woodridge White", team2: "Durbanville B" }
-            ]
+            date: "2025-04-12",
+            event: "Vredelust Hockey Tournament",
+            description: "U/10CD Boys & Girls, U/11C Boys & Girls, U/13C Boys & Girls"
         },
         {
-            day: "FRIDAY",
-            time: "14h30",
-            matches: [
-                { field: "FIELD D", team1: "Durbanville A", team2: "Sun Valley" },
-                { field: "FIELD E", team1: "Durbanville B", team2: "Sunridge" }
-            ]
+            date: "2025-04-13",
+            event: "U/13 WP Trials (Round 2)",
+            description: "Girls @ Table View, Boys @ Kenridge"
         },
         {
-            day: "SATURDAY",
-            time: "08h00",
-            matches: [
-                { field: "FIELD B", team1: "Durbanville B", team2: "Edgemead" },
-                { field: "FIELD F", team1: "Durbanville A", team2: "Eversdal" }
-            ]
+            date: "2025-04-14",
+            event: "League Matches v. Curro Durbanville",
+            description: "Girls - Home (u/13A Girls @ Curro), Boys - Away"
         },
         {
-            day: "SATURDAY",
-            time: "09h00",
-            matches: [
-                { field: "BISON A", team1: "Durbanville B", team2: "Grove" }
-            ]
+            date: "2025-04-14",
+            event: "U/10 - U/12 Rule Discussion",
+            description: "Table View - Novices @ 16:00, Experienced @ 17:00"
         },
         {
-            day: "SATURDAY",
-            time: "09h30",
-            matches: [
-                { field: "FIELD B", team1: "Durbanville A", team2: "De Hoop" }
-            ]
+            date: "2025-04-15",
+            event: "Outeniqua U/13AB Girls Tour",
+            description: "U/13B Girls 08:00-08:45, U/13A Girls 08:50-09:35"
         },
         {
-            day: "SATURDAY",
-            time: "10h30",
-            matches: [
-                { field: "FIELD A", team1: "Durbanville B", team2: "Reddam" }
-            ]
+            date: "2025-04-16",
+            event: "Coaching Clinic",
+            description: "Table View Astro - Andi Berstein"
         },
         {
-            day: "SATURDAY",
-            time: "11h30",
-            matches: [
-                { field: "FIELD C", team1: "Durbanville A", team2: "Grove" },
-                { field: "FIELD D", team1: "Durbanville B", team2: "Gene Louw B" }
-            ]
+            date: "2025-04-22",
+            event: "George Tour",
+            description: "U/11AB Boys and Girls (22-24 April)"
         },
         {
-            day: "SATURDAY",
-            time: "12h30",
-            matches: [
-                { field: "FIELD B", team1: "Durbanville A", team2: "Bredasdorps" },
-                { field: "FIELD D", team1: "Rhenish", team2: "Durbanville B" }
-            ]
+            date: "2025-04-24",
+            event: "League Matches v. Mikro",
+            description: "Girls - Away, Boys - Home"
         },
         {
-            day: "SATURDAY",
-            time: "13h30",
-            matches: [
-                { field: "FIELD C", team1: "Durbanville A", team2: "Woodridge White" }
-            ]
+            date: "2025-05-04",
+            event: "U/13 WP Trials (Round 3)",
+            description: "Venue T.B.V."
         },
         {
-            day: "SUNDAY",
-            time: "08h30",
-            matches: [
-                { field: "BISON B", team1: "Durbanville A", team2: "Sunridge" }
-            ]
+            date: "2025-05-05",
+            event: "U/12 Durbell Zone Trials",
+            description: "Registration"
         },
         {
-            day: "SUNDAY",
-            time: "09h30",
-            matches: [
-                { field: "BISON B", team1: "Woodridge Yellow", team2: "Durbanville B" }
-            ]
+            date: "2025-05-07",
+            event: "WP Recognition Opportunity",
+            description: "Helderberg"
         },
         {
-            day: "SUNDAY",
-            time: "10h00",
-            matches: [
-                { field: "FIELD A", team1: "Durbanville A", team2: "Edgemead" }
-            ]
+            date: "2025-05-08",
+            event: "League Matches v. Welgemoed",
+            description: "Girls - Home, Boys - Away"
         },
         {
-            day: "SUNDAY",
-            time: "10h30",
-            matches: [
-                { field: "FIELD C", team1: "Outeniqua A", team2: "Durbanville B" }
-            ]
+            date: "2025-05-09",
+            event: "U/12 Durbell Zone Trials",
+            description: "Trials"
+        },
+        {
+            date: "2025-05-10",
+            event: "Sport Day",
+            description: "Brackenfell (AWAY), U/10 Durbell Festival @ T.B.V."
+        },
+        {
+            date: "2025-05-15",
+            event: "League Matches v. Bastion",
+            description: "Girls - Home, Boys - Away"
+        },
+        {
+            date: "2025-05-16",
+            event: "Sport Day",
+            description: "PSS Hockey (HOME), U/12 Durbell Zone Trials"
+        },
+        {
+            date: "2025-05-17",
+            event: "Sport Day",
+            description: "PSS Rugby (AWAY), Panorama U/11 Hockey Day, Ma- & Dogterfunksie"
+        },
+        {
+            date: "2025-05-22",
+            event: "League Matches v. Gene Louw",
+            description: "Girls - Away, Boys - Home"
+        },
+        {
+            date: "2025-05-23",
+            event: "Bishops Exchange Week Sport Day",
+            description: "Bishops Hockey (AWAY)"
+        },
+        {
+            date: "2025-05-24",
+            event: "Bishops Exchange Week Sport Day",
+            description: "Bishops Rugby (AWAY)"
+        },
+        {
+            date: "2025-05-29",
+            event: "League Matches v. Brackenfell",
+            description: "Girls - Away, Boys - Home"
+        },
+        {
+            date: "2025-05-30",
+            event: "Sport Day",
+            description: "Eikestad Hockey (AWAY)"
+        },
+        {
+            date: "2025-05-31",
+            event: "Sport Day",
+            description: "Eikestad R & N (HOME)"
+        },
+        {
+            date: "2025-06-25",
+            event: "Capping",
+            description: "U/13A - JC Swart Activity Centre @19:00"
+        },
+        {
+            date: "2025-06-27",
+            event: "School Closes",
+            description: "End of Term 2"
         }
     ],
-    girls: [   
-        {
-            day: "FRIDAY",
-            time: "08h30",
-            matches: [
-                { field: "FIELD B", team1: "Durbanville B", team2: "Outeniqua B" }
-            ]
-        },
-        {
-            day: "FRIDAY",
-            time: "09h00",
-            matches: [
-                { field: "FIELD A", team1: "Durbanville A", team2: "Outeniqua A" }
-            ]
-        },
-        {
-            day: "FRIDAY",
-            time: "10h00",
-            matches: [
-                { field: "FIELD C", team1: "Durbanville B", team2: "Micklefield" },
-                { field: "FIELD D", team1: "Durbanville A", team2: "Greenfield" }
-            ]
-        },
-        
-        {
-            day: "FRIDAY",
-            time: "12h30",
-            matches: [
-                { field: "FIELD D", team1: "Durbanville A", team2: "Bastion" },
-                { field: "BISON B", team1: "Durbanville B", team2: "Oakhurst" }
-            ]
-        },
-        {
-            day: "FRIDAY",
-            time: "13h30",
-            matches: [
-                { field: "BISON A", team1: "Durbanville B", team2: "Panorama B" },
-                { field: "BISON B", team1: "Durbanville A", team2: "Sun Valley" }
-            ]
-        },
-        {
-            day: "FRIDAY",
-            time: "14h30",
-            matches: [
-                { field: "FIELD F", team1: "Durbanville B", team2: "Sunridge" }
-            ]
-        },
-        {
-            day: "FRIDAY",
-            time: "15h00",
-            matches: [
-                { field: "FIELD B", team1: "Durbanville A", team2: "Rhenish" }
-            ]
-        },            
-        {
-            day: "SATURDAY",
-            time: "08h30",
-            matches: [
-                { field: "FIELD A", team1: "Durbanville A", team2: "Woodridge Yellow" },
-                { field: "FIELD B", team1: "Durbanville B", team2: "Woodridge White" }
-            ]
-        },
-        {
-            day: "SATURDAY",
-            time: "09h30",
-            matches: [
-                { field: "FIELD C", team1: "Durbanville B", team2: "Reddam" },
-                { field: "FIELD E", team1: "Durbanville A", team2: "Oakhurst" }
-            ]
-        },
-        {
-            day: "SATURDAY",
-            time: "11h00",
-            matches: [
-                { field: "BISON A", team1: "Durbanville B", team2: "Rhenish" }
-            ]
-        },
-        {
-            day: "SATURDAY",
-            time: "11h30",
-            matches: [
-                { field: "BISON B", team1: "Durbanville A", team2: "Bredasdorp" }
-            ]
-        },
-        {
-            day: "SATURDAY",
-            time: "13h00",
-            matches: [
-                { field: "FIELD F", team1: "Durbanville B", team2: "Groote Schuur" }
-            ]
-        },
-        {
-            day: "SATURDAY",
-            time: "13h00",
-            matches: [
-                { field: "FIELD D", team1: "Durbanville A", team2: "De Hoop" }
-            ]
-        },
-        {
-            day: "SATURDAY",
-            time: "14h00",
-            matches: [
-                { field: "FIELD B", team1: "Durbanville A", team2: "Sunridge" }
-            ]
-        },
-        {
-            day: "SATURDAY",
-            time: "14h30",
-            matches: [
-                { field: "FIELD D", team1: "Bredasdorp", team2: "Durbanville B" }
-            ]
-        },
-        {
-            day: "SUNDAY",
-            time: "09h00",
-            matches: [
-                { field: "FIELD D", team1: "Durbanville A", team2: "Grove" }
-            ]
-        },
-        {
-            day: "SUNDAY",
-            time: "09h30",
-            matches: [
-                { field: "FIELD C", team1: "Durbanville B", team2: "Sun Valley" }
-            ]
-        },
-        {
-            day: "SUNDAY",
-            time: "10h00",
-            matches: [
-                { field: "FIELD F", team1: "Durbanville A", team2: "Gene Louw B" }
-            ]
-        },
-        {
-            day: "SUNDAY",
-            time: "10h30",
-            matches: [
-                { field: "BISON A", team1: "Durbanville B", team2: "Edgemead" }
-            ]
-        }
-    ]
+    note: "Please take note, dates can change!"
 }; 

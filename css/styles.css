@@ -32,9 +32,53 @@
     font-family: monospace;
 }
 
+/* Important date styles */
+.important-date {
+    transition: all 0.3s ease;
+}
+
+/* Event type-specific styles */
+[data-event-type="league-match"] {
+    border-left: 4px solid #3b82f6; /* Blue */
+}
+
+[data-event-type="trial"] {
+    border-left: 4px solid #10b981; /* Green */
+}
+
+[data-event-type="tournament"] {
+    border-left: 4px solid #f59e0b; /* Amber */
+}
+
+[data-event-type="sport-day"] {
+    border-left: 4px solid #8b5cf6; /* Purple */
+}
+
+[data-event-type="school"] {
+    border-left: 4px solid #6366f1; /* Indigo */
+}
+
+[data-event-type="other"] {
+    border-left: 4px solid #6b7280; /* Gray */
+}
+
+/* Date formatting */
+.date {
+    font-family: monospace;
+}
+
+/* Month section */
+.month-section {
+    margin-bottom: 2rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 640px) {
     .fixture {
+        font-size: 0.875rem;
+    }
+
+    .important-date {
         font-size: 0.875rem;
     }
 } 
