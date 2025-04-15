@@ -17,7 +17,7 @@ function initApp() {
     } catch (error) {
         console.error('Error initializing app:', error);
         document.getElementById('important-dates-container').innerHTML = 
-            '<p class="text-red-600 text-center">Error loading important dates. Please try again later.</p>';
+            '<p class="text-red-600 text-center">Error loading data. Please try again later.</p>';
     }
 }
 
