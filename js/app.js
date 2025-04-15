@@ -21,7 +21,7 @@ function initApp() {
     }
 }
 
-// Setup tabs for switching views
+// Update tabs dynamically based on the active tab
 function setupTabs() {
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -29,11 +29,15 @@ function setupTabs() {
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             // Remove active class from all tabs and contents
-            tabs.forEach(t => t.classList.remove('active'));
+            tabs.forEach(t => {
+                t.classList.remove('active');
+                t.classList.add('bg-gray-200', 'text-gray-700');
+            });
             tabContents.forEach(content => content.classList.add('hidden'));
 
             // Add active class to the clicked tab and corresponding content
             tab.classList.add('active');
+            tab.classList.remove('bg-gray-200', 'text-gray-700');
             document.getElementById(tab.dataset.target).classList.remove('hidden');
         });
     });

@@ -72,6 +72,18 @@
     margin-bottom: 2rem;
 }
 
+/* Active tab styling */
+.tab.active {
+    background-color: #1d4ed8; /* Unified Blue */
+    color: #ffffff; /* White */
+}
+
+/* Inactive tab styling */
+.tab {
+    background-color: #e5e7eb; /* Gray */
+    color: #374151; /* Dark Gray */
+}
+
 /* Responsive adjustments */
 @media (max-width: 640px) {
     .fixture {
@@ -81,4 +93,4 @@
     .important-date {
         font-size: 0.875rem;
     }
-} 
+}
