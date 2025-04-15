@@ -1,17 +1,42 @@
 // Constants
 const IMPORTANT_DATES = FIXTURES_DATA.important_dates;
+const RESULTS = RESULTS_DATA.results;
 
 // Main function to initialize the app
 function initApp() {
     try {
-        // Filter out dates that have already passed
+        // Initialize tabs
+        setupTabs();
+
+        // Filter and display important dates
         const upcomingDates = filterUpcomingDates(IMPORTANT_DATES);
         displayImportantDates(upcomingDates);
+
+        // Display results
+        displayResults(RESULTS);
     } catch (error) {
         console.error('Error initializing app:', error);
         document.getElementById('important-dates-container').innerHTML = 
             '<p class="text-red-600 text-center">Error loading important dates. Please try again later.</p>';
     }
+}
+
+// Setup tabs for switching views
+function setupTabs() {
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(content => content.classList.add('hidden'));
+
+            // Add active class to the clicked tab and corresponding content
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.target).classList.remove('hidden');
+        });
+    });
 }
 
 // Filter out dates that have already passed
@@ -74,6 +99,38 @@ function displayImportantDates(dates) {
     container.innerHTML = html;
 }
 
+// Display results
+function displayResults(results) {
+    const container = document.getElementById('results-container');
+    let html = '';
+
+    if (results.length === 0) {
+        html = '<p class="text-center text-gray-600">No results found.</p>';
+    } else {
+        results.forEach(event => {
+            html += `
+                <div class="month-section mb-8">
+                    <h2 class="text-2xl font-bold mt-8 mb-4">${event.date} - ${event.event}</h2>
+            `;
+
+            event.results.forEach(result => {
+                html += `
+                    <div class="important-date bg-white rounded-lg shadow-md p-4 mb-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="team font-semibold">${result.team}</div>
+                            <div class="score text-gray-600">${result.score}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+        });
+    }
+
+    container.innerHTML = html;
+}
+
 // Group dates by month
 function groupDatesByMonth(dates) {
     const months = {};
@@ -122,4 +179,4 @@ function getEventType(event) {
 }
 
 // Initialize the app when the page loads
-document.addEventListener('DOMContentLoaded', initApp); 
+document.addEventListener('DOMContentLoaded', initApp);
