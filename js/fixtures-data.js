@@ -17,8 +17,8 @@ const FIXTURES_DATA = {
         },
         {
             date: "2025-04-11",
-            event: "U/13 WP Trials (Round 1)",
-            description: "Girls @ Table View, Boys @ Kenridge"
+            event: "U/13 WP Trials (Round 3)",
+            description: "14:30 - 17:30, Girls @ Table View, Boys @ Kenridge"
         },
         {
             date: "2025-04-12",
@@ -27,8 +27,8 @@ const FIXTURES_DATA = {
         },
         {
             date: "2025-04-13",
-            event: "U/13 WP Trials (Round 2)",
-            description: "Girls @ Table View, Boys @ Kenridge"
+            event: "U/13 WP Trials (Round 4)",
+            description: "08:00 - 11:00, Girls @ Table View, Boys @ Kenridge"
         },
         {
             date: "2025-04-14",
@@ -44,6 +44,11 @@ const FIXTURES_DATA = {
             date: "2025-04-15",
             event: "Outeniqua U/13AB Girls Tour",
             description: "U/13B Girls 08:00-08:45, U/13A Girls 08:50-09:35"
+        },
+        {
+            date: "2025-04-15",
+            event: "Andrea Nicolson Rule Discussion",
+            description: "Full field rule discussion (u/11 - u/13 parents and players) - Limited space available"
         },
         {
             date: "2025-04-16",
@@ -62,8 +67,8 @@ const FIXTURES_DATA = {
         },
         {
             date: "2025-05-04",
-            event: "U/13 WP Trials (Round 3)",
-            description: "Venue T.B.V."
+            event: "U/13 WP Trials (Round 5)",
+            description: "08:30 - 12:00, Girls @ UCT Astro, Boys @ Kenridge"
         },
         {
             date: "2025-05-05",
@@ -133,17 +138,102 @@ const FIXTURES_DATA = {
         {
             date: "2025-05-31",
             event: "Sport Day",
-            description: "Eikestad R & N (HOME)"
+            description: "Eikestad Rugby & Netball (HOME)"
         },
         {
-            date: "2025-06-25",
+            date: "2025-06-23",
             event: "Capping",
-            description: "U/13A - JC Swart Activity Centre @19:00"
+            description: "U/13A - JC Swart Activity Centre @ 19:00"
         },
         {
             date: "2025-06-27",
             event: "School Closes",
             description: "End of Term 2"
+        },
+        {
+            date: "2025-07-22",
+            event: "School Opens",
+            description: "First day of Term 3"
+        },
+        {
+            date: "2025-07-17",
+            event: "Hockey Tour",
+            description: "Durban U/13A Boys and Girls (17-20 July)"
+        },
+        {
+            date: "2025-07-24",
+            event: "Eversdal Hockey Tournament",
+            description: "U/11 ABCD (14:00-19:00)"
+        },
+        {
+            date: "2025-07-24",
+            event: "League Matches v. Panorama",
+            description: "Girls - Home, Boys - Away"
+        },
+        {
+            date: "2025-07-31",
+            event: "League Matches v. Table View",
+            description: "Girls - Away, Boys - Home"
+        },
+        {
+            date: "2025-08-01",
+            event: "Laerskool Durbanville U/10 Hockey Tournament",
+            description: "14:30-18:00"
+        },
+        {
+            date: "2025-08-07",
+            event: "League Matches v. Reddam House",
+            description: "Girls - Home, Boys - Away"
+        },
+        {
+            date: "2025-08-08",
+            event: "CO-ED Tournament",
+            description: "U/13A Boys and Girls (8-9 August, Curro)"
+        },
+        {
+            date: "2025-08-14",
+            event: "League Matches v. Kenridge",
+            description: "Girls - Home, Boys - Away (Note: This match will be moved due to Gene Louw sports week)"
+        },
+        {
+            date: "2025-08-11",
+            event: "Sport Day",
+            description: "Gene Louw (HOME) - High school interschools (15-16 August)"
+        },
+        {
+            date: "2025-08-21",
+            event: "League Matches v. Eversdal",
+            description: "Girls - Home, Boys - Away"
+        },
+        {
+            date: "2025-08-22",
+            event: "Sport Day",
+            description: "Bastion - Hockey (AWAY)"
+        },
+        {
+            date: "2025-08-22",
+            event: "Sport Day",
+            description: "Bastion - Rugby & Netball (AWAY)"
+        },
+        {
+            date: "2025-08-25",
+            event: "Play-off",
+            description: "4th Place Durbell vs. 4th Place South (25-29 August)"
+        },
+        {
+            date: "2025-09-05",
+            event: "Top Schools",
+            description: "WP U/13 Girls & Boys (14:30-21:00, 5-7 September)"
+        },
+        {
+            date: "2025-09-01",
+            event: "Hockey Year End Function",
+            description: "Date and time TBC"
+        },
+        {
+            date: "2025-10-03",
+            event: "School Closes",
+            description: "End of Term 3"
         }
     ],
     note: "Please take note, dates can change!"
