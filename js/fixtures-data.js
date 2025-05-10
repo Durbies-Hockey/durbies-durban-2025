@@ -106,6 +106,11 @@ const FIXTURES_DATA = {
             description: "PSS Hockey (HOME), U/12 Durbell Zone Trials"
         },
         {
+            date: "2025-05-13",
+            event: "u13A Boys vs Welgemoed",
+            description: "Bellville Astro"
+        },
+        {
             date: "2025-05-17",
             event: "Sport Day",
             description: "PSS Rugby (AWAY), Panorama U/11 Hockey Day, Ma- & Dogterfunksie"
