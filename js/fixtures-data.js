@@ -96,6 +96,11 @@ const FIXTURES_DATA = {
             description: "Brackenfell (AWAY), U/10 Durbell Festival @ T.B.V."
         },
         {
+            date: "2025-05-13",
+            event: "u13A Boys vs Welgemoed",
+            description: "Bellville Astro"
+        },
+        {
             date: "2025-05-15",
             event: "League Matches v. Bastion",
             description: "Girls - Home, Boys - Away"
@@ -104,11 +109,6 @@ const FIXTURES_DATA = {
             date: "2025-05-16",
             event: "Sport Day",
             description: "PSS Hockey (HOME), U/12 Durbell Zone Trials"
-        },
-        {
-            date: "2025-05-13",
-            event: "u13A Boys vs Welgemoed",
-            description: "Bellville Astro"
         },
         {
             date: "2025-05-17",
