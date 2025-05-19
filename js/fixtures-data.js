@@ -83,7 +83,7 @@ const FIXTURES_DATA = {
         {
             date: "2025-05-08",
             event: "League Matches v. Welgemoed",
-            description: "Girls - Home, Boys - Away"
+            description: "Girls - Home"
         },
         {
             date: "2025-05-09",
@@ -94,11 +94,6 @@ const FIXTURES_DATA = {
             date: "2025-05-10",
             event: "Sport Day",
             description: "Brackenfell (AWAY), U/10 Durbell Festival @ T.B.V."
-        },
-        {
-            date: "2025-05-13",
-            event: "u13A Boys vs Welgemoed",
-            description: "Bellville Astro"
         },
         {
             date: "2025-05-15",
@@ -129,6 +124,11 @@ const FIXTURES_DATA = {
             date: "2025-05-24",
             event: "Bishops Exchange Week Sport Day",
             description: "Bishops Rugby (AWAY)"
+        },
+        {
+            date: "2025-05-27",
+            event: "u13A Boys vs Welgemoed",
+            description: "Bellville Astro"
         },
         {
             date: "2025-05-29",
