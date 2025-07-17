@@ -1,23 +1,12 @@
 // Constants
-const IMPORTANT_DATES = FIXTURES_DATA.important_dates;
-const RESULTS = RESULTS_DATA.results;
 
 // Main function to initialize the app
 function initApp() {
     try {
-        // Initialize tabs
-        setupTabs();
-
-        // Filter and display important dates
-        const upcomingDates = filterUpcomingDates(IMPORTANT_DATES);
-        displayImportantDates(upcomingDates);
-
-        // Display results
-        displayResults(RESULTS);
+        // Load and display fixtures
+        loadAndDisplayFixtures();
     } catch (error) {
         console.error('Error initializing app:', error);
-        document.getElementById('important-dates-container').innerHTML = 
-            '<p class="text-red-600 text-center">Error loading data. Please try again later.</p>';
     }
 }
 
@@ -43,114 +32,81 @@ function setupTabs() {
     });
 }
 
-// Filter out dates that have already passed
-function filterUpcomingDates(dates) {
-    const today = new Date();
-    // Set time to beginning of day for accurate comparison
-    today.setHours(0, 0, 0, 0);
-    
-    return dates.filter(dateObj => {
-        const eventDate = new Date(dateObj.date);
-        // Set time to beginning of day for accurate comparison
-        eventDate.setHours(0, 0, 0, 0);
-        return eventDate >= today;
+// Load and display fixtures from in-memory data
+function loadAndDisplayFixtures() {
+    try {
+        const fixtures = FIXTURES_DATA.fixtures || [];
+        const upcomingFixtures = filterUpcomingFixtures(fixtures);
+        displayFixtures(upcomingFixtures);
+    } catch (error) {
+        console.error('Error loading fixtures:', error);
+        document.getElementById('fixtures-container').innerHTML = 
+            '<p class="text-red-600 text-center">Error loading fixtures. Please try again later.</p>';
+    }
+}
+
+// Filter out past fixtures
+function filterUpcomingFixtures(fixtures) {
+    const now = new Date();
+    return fixtures.filter(fixture => {
+        const fixtureDateTime = new Date(`${fixture.date}T${fixture.time}`);
+        return fixtureDateTime >= now;
     });
 }
 
-// Display important dates
-function displayImportantDates(dates) {
-    const container = document.getElementById('important-dates-container');
+// Display fixtures
+function displayFixtures(fixtures) {
+    const container = document.getElementById('fixtures-container');
     let html = '';
 
-    if (dates.length === 0) {
-        html = '<p class="text-center text-gray-600">No upcoming events found.</p>';
-    } else {
-        // Group dates by month
-        const datesByMonth = groupDatesByMonth(dates);
+    // Helper to get display name for Durbanville Primary
+    function getDurbanvilleDisplayName(team, gender) {
+        if (team === 'Durbanville Primary') {
+            if (gender === 'Boys') return 'Durbanville (Boys)';
+            if (gender === 'Girls') return 'Durbanville (Girls)';
+        }
+        return team;
+    }
 
-        // Display each month
-        Object.keys(datesByMonth).forEach(month => {
+    if (fixtures.length === 0) {
+        html = '<p class="text-center text-gray-600">No upcoming fixtures found.</p>';
+    } else {
+        // Group fixtures by date
+        const fixturesByDate = groupFixturesByDate(fixtures);
+        Object.keys(fixturesByDate).forEach(date => {
             html += `
                 <div class="month-section mb-8">
-                    <h2 class="text-2xl font-bold mt-8 mb-4">${month}</h2>
+                    <h2 class="text-2xl font-bold mt-8 mb-4">${formatDate(date)}</h2>
             `;
-
-            // Display each date in the month
-            datesByMonth[month].forEach(dateObj => {
-                const formattedDate = formatDate(dateObj.date);
-                const eventType = getEventType(dateObj.event);
-                
+            fixturesByDate[date].forEach(fixture => {
                 html += `
-                    <div class="important-date bg-white rounded-lg shadow-md p-4 mb-4" data-event-type="${eventType}">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <div class="date font-semibold">${formattedDate}</div>
-                            <div class="event">${dateObj.event}</div>
-                            <div class="description text-gray-600">${dateObj.description}</div>
+                    <div class="fixture bg-white rounded-lg shadow-md p-4 mb-4" data-gender="${fixture.gender.toLowerCase()}">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                            <div class="time font-mono">${fixture.time}</div>
+                            <div class="venue font-semibold">${fixture.venue}</div>
+                            <div class="teams">
+                                <span class="team ${getTeamClass(fixture.team1, fixture.gender)}">${getDurbanvilleDisplayName(fixture.team1, fixture.gender)}</span>
+                                <span class="mx-2">vs</span>
+                                <span class="team ${getTeamClass(fixture.team2, fixture.gender)}">${getDurbanvilleDisplayName(fixture.team2, fixture.gender)}</span>
+                            </div>
                         </div>
                     </div>
                 `;
             });
-
-            html += `</div>`;
-        });
-
-        // Add note if it exists
-        if (FIXTURES_DATA.note) {
-            html += `<p class="text-center text-gray-500 italic mt-4">${FIXTURES_DATA.note}</p>`;
-        }
-    }
-
-    container.innerHTML = html;
-}
-
-// Display results
-function displayResults(results) {
-    const container = document.getElementById('results-container');
-    let html = '';
-
-    if (results.length === 0) {
-        html = '<p class="text-center text-gray-600">No results found.</p>';
-    } else {
-        results.forEach(event => {
-            html += `
-                <div class="month-section mb-8">
-                    <h2 class="text-2xl font-bold mt-8 mb-4">${event.date} - ${event.event}</h2>
-            `;
-
-            event.results.forEach(result => {
-                html += `
-                    <div class="important-date bg-white rounded-lg shadow-md p-4 mb-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="team font-semibold">${result.team}</div>
-                            <div class="score text-gray-600">${result.score}</div>
-                        </div>
-                    </div>
-                `;
-            });
-
             html += `</div>`;
         });
     }
-
     container.innerHTML = html;
 }
 
-// Group dates by month
-function groupDatesByMonth(dates) {
-    const months = {};
-    
-    dates.forEach(dateObj => {
-        const date = new Date(dateObj.date);
-        const monthYear = date.toLocaleString('default', { month: 'long', year: 'numeric' });
-        
-        if (!months[monthYear]) {
-            months[monthYear] = [];
-        }
-        
-        months[monthYear].push(dateObj);
+// Group fixtures by date
+function groupFixturesByDate(fixtures) {
+    const grouped = {};
+    fixtures.forEach(fixture => {
+        if (!grouped[fixture.date]) grouped[fixture.date] = [];
+        grouped[fixture.date].push(fixture);
     });
-    
-    return months;
+    return grouped;
 }
 
 // Format date to a more readable format
@@ -163,23 +119,17 @@ function formatDate(dateString) {
     });
 }
 
-// Determine event type for styling
-function getEventType(event) {
-    const eventLower = event.toLowerCase();
-    
-    if (eventLower.includes('league') || eventLower.includes('match')) {
-        return 'league-match';
-    } else if (eventLower.includes('trial') || eventLower.includes('trials')) {
-        return 'trial';
-    } else if (eventLower.includes('tour') || eventLower.includes('tournament')) {
-        return 'tournament';
-    } else if (eventLower.includes('sport day')) {
-        return 'sport-day';
-    } else if (eventLower.includes('school')) {
-        return 'school';
-    } else {
-        return 'other';
-    }
+// Get team class for styling
+function getTeamClass(team, gender) {
+    const t = team.toLowerCase();
+    if (t.includes('durbanville') && t.includes('boys') && t.includes('a')) return 'team--durbanville-boys-a';
+    if (t.includes('durbanville') && t.includes('boys') && t.includes('b')) return 'team--durbanville-boys-b';
+    if (t.includes('durbanville') && t.includes('girls') && t.includes('a')) return 'team--durbanville-girls-a';
+    if (t.includes('durbanville') && t.includes('girls') && t.includes('b')) return 'team--durbanville-girls-b';
+    // fallback for Durbanville Primary
+    if (t.includes('durbanville') && gender.toLowerCase() === 'boys') return 'team--durbanville-boys-a';
+    if (t.includes('durbanville') && gender.toLowerCase() === 'girls') return 'team--durbanville-girls-a';
+    return '';
 }
 
 // Initialize the app when the page loads
